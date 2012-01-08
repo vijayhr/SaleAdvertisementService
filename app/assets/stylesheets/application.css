@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+body {
+    display: block;
+    margin: 8px;
+    font-family: sans-serif;
+    background: white;
+}
+#container {
+    border-spacing: 10px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 75%;
+}
+#header {
+    height: 2em;
+    margin-bottom: 1em;
+    padding: 3px;
+    font-weight: normal;
+}
+.banner {
+    text-align: left;
+    font-weight: bold;
+    padding: 2px;
+    clear: both;
+    border: 1px solid #CCC;
+    background: #EEE;
+    margin-bottom: 0.5em;
+}
+.banner h3 {
+    margin: 0 auto;
+    float: left;
+}
+
+
+#search-box {
+    width:100%;
+    display: block;
+    margin-bottom: 0.5em;
+    height: 20px;
+}
+
+#search-textbox{
+    width:250px;
+    border:solid 1px #000;
+}
+#search-box input {
+    float: right;
+    padding:3px;
+    height: 14px;
+    border: 0;
+}
+
+#search-box input[type="button"] {
+    background-image: url(icons.png);
+    background-repeat: no-repeat;
+    background-position: -81px -38px;
+    background-color: white;
+    cursor: pointer;
+    display: block;
+    width: 22px;
+}
+
+#search-box a {
+    float: right;
+    font-size:10px;
+    margin: 3px;
+    line-height: 25px;
+}
+#search-box-wrapper {
+    border:solid 1px #000;
+    padding: 0;
+    height: 20px;
+    display: inline-block;
+    float:right;
+}
+
+#content {
+    display: block;
+}
+
+#notice {
+    color: red;
+    font-size: 15px;
+}

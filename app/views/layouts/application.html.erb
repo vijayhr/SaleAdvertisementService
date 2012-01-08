@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SaleAdvertisementService</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+    <div id="header" class="banner">
+      <h3>Sale Advertisement Service</h3>
+
+        <div id="user_login_box" style="float:right">
+          <% if user_signed_in? -%>
+            <%= current_user.name %> |
+            <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+          <%else%>
+            <%= link_to 'Sign In', user_session_path, :method => :post %>
+          <% end -%>
+        </div>
+    </div>
+    <div id="search-box">
+      <%= link_to 'Add New Item', new_item_path, :method => :get if user_signed_in? -%>
+      <%= link_to 'Show All', items_path %>
+      <span id="search-box-wrapper">
+        <input type="button" id="search-button" src="search.gif" border="0">
+        <input type="text" class="search" id="search-textbox" placeholder="Search by Title"/>
+      </span>
+    </div>
+    <div id="content">
+      <p id="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

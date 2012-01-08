@@ -1,0 +1,24 @@
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= pluralize(@item.errors.count, "Error") %> </h4>
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  Title:
+  <br/>
+  <%= f.text_field :title %><br/>
+  Description:<br/>
+  <%= f.text_area :description %><br/>
+  Price:<br/>
+  <%= f.text_field :price %><br/>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

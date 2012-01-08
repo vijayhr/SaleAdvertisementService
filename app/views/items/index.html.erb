@@ -1,0 +1,8 @@
+<% @items.each do |created_at,items| %>
+  <div id="item-<%=created_at%>">
+    <div class="banner"><h5><%=created_at%></h5></div>
+    <%items.each do |item|%>
+      <div class="item"><%= link_to h(item.title), item %></div>
+    <%end%>
+  </div>
+<% end %>
